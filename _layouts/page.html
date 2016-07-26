@@ -24,7 +24,14 @@ layout: compress
                 {{ content }}
             </div>
         </div>
-        {% if page.comments and site.disqus_shortname %}<section id="disqus_thread" class="animated fadeInUp"></section><!-- /#disqus_thread -->{% endif %}
+        {% if page.comments and site.disqus_shortname %}
+			<div class="comment">
+				<span>Comments</span>
+				<!-- 多说评论框 start -->
+				<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="qiailin.github.io{{ page.url }}"></div>
+				<!-- 多说评论框 end -->
+			</div>
+		{% endif %}
     </header>
     {% include scripts.html %}
     {% if site.mathjax == true %}
