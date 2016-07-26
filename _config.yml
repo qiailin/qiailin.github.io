@@ -26,11 +26,10 @@ sass:
   style:            compressed
 
 # Comments
-comments :
-     provider : duoshuo
-     duoshuo : 
-     short_name : qiailin
-     
+comments : true
+provider : duoshuo
+duoshuo : 
+short_name : qiailin
 disqus_shortname:  qiailin
 
 # Social
