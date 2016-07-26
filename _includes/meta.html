@@ -13,12 +13,14 @@
     </a>
 </span>
 {% if page.comments != false %}
+	<!--
    <div class="comment">
     <span>Comments</span>
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="qiailin.github.io{{ page.url }}"></div>
-    <!-- 多说评论框 end -->
-</div>
+    <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="qiailin.github.io{{ page.url }}">
+	</div>
+	</div>
+	-->
+	<div id="uyan_frame"></div>
 {% endif %}
 <div style="clear:both"></div>
 
