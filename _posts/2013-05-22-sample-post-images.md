@@ -2,7 +2,7 @@
 layout: post
 title: "自传"
 date: 2013-05-22
-excerpt: "一个90小伙的自传."
+excerpt: "一个90小伙的自传，热爱生活 热爱编程"
 tags: [blog post, images, test]
 comments: true
 ---
@@ -35,9 +35,9 @@ Maven、Servicemix 最早的时候英文懂得不多 然而相关文档全是英
 	Email : qiailin@yeah.net
 	
 
-### Figures (for images)
+### Image
 
 <img  src="{{ site.baseurl }}/assets/img/qiailin.png" alt=":wink:" title=":wink:">
 
-#### One Up
+
 
