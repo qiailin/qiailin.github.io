@@ -1,97 +1,43 @@
 ---
 layout: post
-title: "A Post with Images"
+title: "自传"
 date: 2013-05-22
 excerpt: "Examples and code for displaying images in posts."
 tags: [sample post, images, test]
 comments: true
 ---
+### 自传
 
-Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use `figure` with the appropriate `class`. Each instance of `figure` is auto-numbered and displayed in the caption.
 
-### Figures (for images or video)
+	芳名 '漆艾林' ,  小时候特别调皮捣蛋 最喜欢的是打游戏 . 一台电视 一台街机盒子就是童年 当然最喜欢依旧是超级玛丽、魂斗罗
+
+	当然死党也依旧不少关系也特别要好  总以为毕业遥遥无期，转眼就各奔东西 然后有了各自的人生 .  然后就是初中、高中 且平淡无
+
+	奇了. 高中念上了自己喜欢的学校 同样遇到很要好的朋友 当然收尾都一样 . 
+
+	现在还是喜欢计算机 , 在中大培训完之后 出去找了第一份工作面试的Java  我记得是在华师附近的科技园 , 刚进去的时候没有太多
+	
+	经验 老大带了一段时间 当然过程是艰辛、痛苦的,疯狂的吸收任何可以接收的知识 . 第一次使用Ubuntu 、tomcat集群、 svn 、git
+
+	Maven、Servicemix 最早的时候英文懂得不多 然而相关文档全是英文的 , 后来英语成了我的第二母语 . 第二份工作也是在五山旁边
+
+	这份工作非常重要 期间遇到了 Peter ， 传说中的技术大牛 不仅技术好、人更好 !  所有的一切都是从这里开始学习的 .
+
+	后来学了 Android 、Python ， 知识的积累过程是痛苦的 . 然而一切都是自己喜欢的 !  
+
+	曾经暗恋过一个妹子，然而这个妹子现在已经是一个孩子的妈了 ！   恰好我又是这个孩子的爹 ....  
+
+	最大的愿望的是老爸、老妈身体健健康康 ，墨儿快快长大 ， 小伙伴们生活美满 .
+
+	最后感谢 Teacher Zhao , Peter . 
+
+	QQ : 613875214 
+	Email : qiailin@yeah.net
+	
+
+### Figures (for images)
+
+<img  src="{{ site.baseurl }}/assets/img/qiailin.png" alt=":wink:" title=":wink:">
 
 #### One Up
 
-<figure>
-	<a href="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg"><img src="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg"></a>
-	<figcaption><a href="http://www.flickr.com/photos/80901381@N04/7758832526/" title="Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr">Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr</a>.</figcaption>
-</figure>
-
-Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.
-
-#### Two Up
-
-Apply the `half` class like so to display two images side by side that share the same caption.
-
-{% highlight html %}
-<figure class="half">
-    <a href="/images/image-filename-1-large.jpg"><img src="/images/image-filename-1.jpg"></a>
-    <a href="/images/image-filename-2-large.jpg"><img src="/images/image-filename-2.jpg"></a>
-    <figcaption>Caption describing these two images.</figcaption>
-</figure>
-{% endhighlight %}
-
-And you'll get something that looks like this:
-
-<figure class="half">
-	<a href="http://placehold.it/1200x600.JPG"><img src="http://placehold.it/600x300.jpg"></a>
-	<a href="http://placehold.it/1200x600.jpeg"><img src="http://placehold.it/600x300.jpg"></a>
-	<figcaption>Two images.</figcaption>
-</figure>
-
-#### Three Up
-
-Apply the `third` class like so to display three images side by side that share the same caption.
-
-{% highlight html %}
-<figure class="third">
-	<img src="/images/image-filename-1.jpg">
-	<img src="/images/image-filename-2.jpg">
-	<img src="/images/image-filename-3.jpg">
-	<figcaption>Caption describing these three images.</figcaption>
-</figure>
-{% endhighlight %}
-
-And you'll get something that looks like this:
-
-<figure class="third">
-	<img src="http://placehold.it/600x300.jpg">
-	<img src="http://placehold.it/600x300.jpg">
-	<img src="http://placehold.it/600x300.jpg">
-	<figcaption>Three images.</figcaption>
-</figure>
-
-### Alternative way
-
-Another way to achieve the same result is to include `gallery` Liquid template. In this case you
-don't have to write any HTML tags – just copy a small block of code, adjust the parameters (see below)
-and fill the block with any number of links to images. You can mix relative and external links.
-
-Here is the block you might want to use:
-
-{% highlight liquid %}
-{% raw %}
-{% capture images %}
-	http://vignette2.wikia.nocookie.net/naruto/images/9/97/Hinata.png
-	http://vignette4.wikia.nocookie.net/naruto/images/7/79/Hinata_Part_II.png
-	http://vignette1.wikia.nocookie.net/naruto/images/1/15/J%C5%ABho_S%C5%8Dshiken.png
-{% endcapture %}
-{% include gallery images=images caption="Test images" cols=3 %}
-{% endraw %}
-{% endhighlight %}
-
-Parameters:
-
-- `caption`: Sets the caption under the gallery (see `figcaption` HTML tag above);
-- `cols`: Sets the number of columns of the gallery.
-Available values: [1..3].
-
-It will look something like this:
-
-{% capture images %}
-	http://vignette2.wikia.nocookie.net/naruto/images/9/97/Hinata.png
-	http://vignette4.wikia.nocookie.net/naruto/images/7/79/Hinata_Part_II.png
-	http://vignette1.wikia.nocookie.net/naruto/images/1/15/J%C5%ABho_S%C5%8Dshiken.png
-{% endcapture %}
-{% include gallery images=images caption="Test images" cols=3 %}
